@@ -13,6 +13,6 @@ public class Aluno extends Usuario{
 
     @Override
     int getPrazoDias() {
-        return prazoDias;
+        return 14;
     }
 }
