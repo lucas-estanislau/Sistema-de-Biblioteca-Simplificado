@@ -1,18 +1,16 @@
 package biblioteca;
 
 public class Professor extends Usuario {
-    protected int prazoDias;
+    protected int prazoDias = 7;
 
-    public Professor(String nome, String matricula, String curso, int prazoDias) {
+    public Professor(String nome, String matricula, String curso) {
         this.nome = nome;
         this.matricula = matricula;
         this.curso = curso;
-        this.prazoDias = prazoDias;
-        System.out.println("O professor " + this.nome + " foi cadastrado com sucesso.");
     }
 
     @Override
     int getPrazoDias() {
-        return 7;
+        return prazoDias;
     }
 }
