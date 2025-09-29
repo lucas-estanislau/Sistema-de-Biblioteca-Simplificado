@@ -19,7 +19,7 @@ public class Main {
             System.out.println("0 - Sair");
             System.out.print("Opção: ");
             opcao = scan.nextInt();
-            scan.nextLine(); // limpar quebra de linha
+            scan.nextLine();
 
             switch (opcao) {
                 case 1: // cadastrar aluno
@@ -63,7 +63,7 @@ public class Main {
                     String matricula_busca = scan.nextLine();
 
                     Usuario usuario_encontrado = null;
-                    for (Usuario usuario : biblioteca.getUsuarios()) { // precisa de getter em Biblioteca
+                    for (Usuario usuario : biblioteca.getUsuarios()) {
                         if (usuario.getMatricula().equals(matricula_busca)) {
                             usuario_encontrado = usuario;
                             break;
@@ -79,7 +79,7 @@ public class Main {
                     String tituloBusca = scan.nextLine();
 
                     Livro livro_encontrado = null;
-                    for (Livro livro : biblioteca.getLivros()) { // precisa de getter em Biblioteca
+                    for (Livro livro : biblioteca.getLivros()) {
                         if (livro.getTitulo().equalsIgnoreCase(tituloBusca)) {
                             livro_encontrado = livro;
                             break;
