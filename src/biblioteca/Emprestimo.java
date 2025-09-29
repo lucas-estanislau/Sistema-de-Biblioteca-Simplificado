@@ -66,11 +66,4 @@ public class Emprestimo {
     public void setData_devolucao(LocalDate data_devolucao) {
         this.data_devolucao = data_devolucao;
     }
-
-    /*public void infoEmprestimo() {
-        System.out.println("\n");
-        System.out.println("ID: " + id);
-        System.out.println("Matrícula: " + usuario.matricula);
-        System.out.println("Livro: " + livro.titulo + ", " + livro.autor + ", " + livro.ano);
-    }*/
 }

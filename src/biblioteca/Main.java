@@ -9,20 +9,20 @@ public class Main {
 
         int opcao;
         do {
-            System.out.println("\n=== MENU BIBLIOTECA ===");
+            System.out.println("\n======== MENU ========");
             System.out.println("1 - Cadastrar Aluno");
             System.out.println("2 - Cadastrar Professor");
             System.out.println("3 - Cadastrar Livro");
             System.out.println("4 - Realizar Empréstimo");
             System.out.println("5 - Realizar Devolução");
-            System.out.println("6 - Listar Empréstimos em andamento");
+            System.out.println("6 - Listar Empréstimos em Andamento");
             System.out.println("0 - Sair");
             System.out.print("Opção: ");
             opcao = scan.nextInt();
             scan.nextLine(); // limpar quebra de linha
 
             switch (opcao) {
-                case 1:
+                case 1: // cadastrar aluno
                     System.out.print("\n");
                     System.out.print("Matrícula: ");
                     String matricula_aluno = scan.nextLine();
@@ -33,7 +33,7 @@ public class Main {
                     biblioteca.cadastrarUsuario(new Aluno(nome_aluno, matricula_aluno, curso_aluno));
                     break;
 
-                case 2:
+                case 2: // cadastrar professor
                     System.out.print("\n");
                     System.out.print("Matrícula: ");
                     String matricula_professor = scan.nextLine();
@@ -44,7 +44,7 @@ public class Main {
                     biblioteca.cadastrarUsuario(new Professor(nome_professor, matricula_professor, curso_professor));
                     break;
 
-                case 3:
+                case 3: // cadastrar livro
                     System.out.print("\n");
                     System.out.print("Título: ");
                     String titulo = scan.nextLine();
@@ -57,7 +57,7 @@ public class Main {
                     biblioteca.cadastrarLivro(new Livro(titulo, autor, ano, quantidade));
                     break;
 
-                case 4:
+                case 4: // realizar empréstimo
                     System.out.print("\n");
                     System.out.print("Matrícula do usuário: ");
                     String matricula_busca = scan.nextLine();
@@ -95,7 +95,7 @@ public class Main {
                     biblioteca.novoEmprestimo(novo_id, usuario_encontrado, livro_encontrado);
                     break;
 
-                case 5:
+                case 5: // realizar devolução
                     System.out.print("\n");
                     boolean emprestimosEmAndamento = biblioteca.exibirEmprestimos();
 
@@ -122,7 +122,7 @@ public class Main {
 
                     break;
 
-                case 6:
+                case 6: // listar empréstimos em andamento
                     System.out.print("\n");
                     biblioteca.exibirEmprestimos();
                     break;
@@ -136,7 +136,5 @@ public class Main {
         } while (opcao != 0);
 
         scan.close();
-
-
     }
 }
