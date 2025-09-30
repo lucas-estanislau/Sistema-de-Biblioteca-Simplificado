@@ -1,4 +1,4 @@
-package biblioteca;
+package biblioteca.usuarios;
 
 public class Aluno extends Usuario {
     protected int prazoDias = 14;
@@ -11,7 +11,7 @@ public class Aluno extends Usuario {
     }
 
     @Override
-    int getPrazoDias() {
+    public int getPrazoDias() {
         return prazoDias;
     }
 }

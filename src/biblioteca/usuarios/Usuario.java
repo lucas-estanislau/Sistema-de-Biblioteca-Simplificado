@@ -1,11 +1,11 @@
-package biblioteca;
+package biblioteca.usuarios;
 
-abstract class Usuario {
+public abstract class Usuario {
     protected String nome;
     protected String matricula;
     protected String curso;
 
-    abstract int getPrazoDias();
+    public abstract int getPrazoDias();
 
     public String getNome() {
         return nome;

@@ -1,4 +1,7 @@
-package biblioteca;
+package biblioteca.sistema;
+
+import biblioteca.livros.Livro;
+import biblioteca.usuarios.Usuario;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -23,23 +26,23 @@ public class Biblioteca {
 
     public void cadastrarUsuario(Usuario usuario) {
         usuarios.add(usuario);
-        System.out.println(usuario.nome + " foi cadastrado!");
+        System.out.println("\n" + usuario.getNome() + " foi cadastrado!\n");
     }
 
     public void cadastrarLivro(Livro livro) {
         livros.add(livro);
-        System.out.println(livro.titulo + " foi cadastrado!");
+        System.out.println("\n" + livro.getTitulo() + " foi cadastrado!\n");
     }
 
     public void novoEmprestimo(int id, Usuario usuario, Livro livro) {
         if(livro.getQuantidade() == 0) {
-            System.out.println("Livro indisponível no estoque.");
+            System.out.println("\nLivro indisponível no estoque.\n");
         } else {
             Emprestimo emprestimo = new Emprestimo(id, usuario, livro);
             emprestimos.add(emprestimo);
             livro.setQuantidade(livro.getQuantidade() - 1);
-            System.out.println("Empréstimo realizado com sucesso!");
-            System.out.println("Data prevista: " + emprestimo.getData_prevista());
+            System.out.println("\nEmpréstimo realizado com sucesso!");
+            System.out.println("Data prevista: " + emprestimo.getData_prevista() + "\n");
         }
     }
 
@@ -54,14 +57,15 @@ public class Biblioteca {
         for(Emprestimo emprestimo : emprestimos) {
             if(emprestimo.getData_devolucao() == null) {
                 emprestimoEmAndamento = true;
-                System.out.println("Empréstimo ID " + emprestimo.getId() + ":\n " +
-                        emprestimo.getUsuario().getMatricula() + " - " + emprestimo.getLivro().getTitulo()
-                        + ", " + emprestimo.getLivro().getAno());
+                System.out.println("Empréstimo ID " + emprestimo.getId() + ":\n     Matrícula: " +
+                        emprestimo.getUsuario().getMatricula() + " | Livro: " + emprestimo.getLivro().getTitulo()
+                        + ", " + emprestimo.getLivro().getAno() + " | Data prevista: " + emprestimo.getData_prevista() +
+                        "\n");
             }
         }
 
         if(!emprestimoEmAndamento) {
-            System.out.println("Nenhum empréstimo em andamento.");
+            System.out.println("Nenhum empréstimo em andamento.\n");
         }
 
         return emprestimoEmAndamento;

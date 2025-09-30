@@ -1,5 +1,10 @@
 package biblioteca;
 
+import biblioteca.livros.Livro;
+import biblioteca.sistema.Biblioteca;
+import biblioteca.sistema.Emprestimo;
+import biblioteca.usuarios.*;
+
 import java.util.Scanner;
 
 public class Main {
@@ -9,7 +14,7 @@ public class Main {
 
         int opcao;
         do {
-            System.out.println("\n======== MENU ========");
+            System.out.println("======== MENU ========");
             System.out.println("1 - Cadastrar Aluno");
             System.out.println("2 - Cadastrar Professor");
             System.out.println("3 - Cadastrar Livro");

@@ -1,4 +1,7 @@
-package biblioteca;
+package biblioteca.sistema;
+
+import biblioteca.livros.Livro;
+import biblioteca.usuarios.Usuario;
 
 import java.time.LocalDate;
 
