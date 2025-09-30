@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Emprestimo {
     private int id;
-    private Usuario usuario;
+    protected Usuario usuario;
     private Livro livro;
     private LocalDate data_emprestimo;
     private LocalDate data_prevista;

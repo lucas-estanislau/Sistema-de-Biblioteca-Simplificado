@@ -39,6 +39,7 @@ public class Biblioteca {
             emprestimos.add(emprestimo);
             livro.setQuantidade(livro.getQuantidade() - 1);
             System.out.println("Empréstimo realizado com sucesso!");
+            System.out.println("Data prevista: " + emprestimo.getData_prevista());
         }
     }
 

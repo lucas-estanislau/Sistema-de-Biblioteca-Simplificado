@@ -1,6 +1,6 @@
 package biblioteca;
 
-public class Aluno extends Usuario{
+public class Aluno extends Usuario {
     protected int prazoDias = 14;
 
     public Aluno(String nome, String matricula, String curso) {
